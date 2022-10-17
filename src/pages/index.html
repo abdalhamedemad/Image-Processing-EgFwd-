@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header><h1>Image Processing project</h1></header>
+		<div class="container">
+			<form action="/api/imageprocess/imageResize" method="get">
+				<div>
+					<label for="image-name">Name:</label>
+					<input
+						id="image-name"
+						name="name"
+						type="text"
+						placeholder="Ex: pic1"
+					/>
+					<label for="image-width">Width:</label>
+					<input
+						id="image-width"
+						type="number"
+						placeholder="Ex:400"
+						name="width"
+					/>
+					<label for="image-height">Height:</label>
+					<input
+						id="image-height"
+						type="number"
+						placeholder="Ex:400"
+						name="height"
+					/>
+				</div>
+				<button type="submit" value="submit">get photo</button>
+			</form>
+		</div>
+		<footer>Created by: Abdal-hameed Emad</footer>
+		<!-- <img src="../output.jpg" alt=""> -->
+	</body>
+</html>
+
+<style>
+	:root {
+		--main-color: #cc7a65;
+		--second-back: #eeeeee;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body {
+		min-height: 100vh;
+		position: relative;
+		background-color: var(--second-back);
+	}
+	header {
+		height: 80px;
+		padding: 15px;
+		margin-bottom: 40px;
+		text-align: center;
+		background-color: var(--main-color);
+	}
+	h1 {
+		color: aliceblue;
+	}
+	#image-name {
+		width: 120px;
+	}
+	#image-name::placeholder {
+		padding: 5px;
+	}
+	#image-width,
+	#image-height {
+		width: 80px;
+	}
+	footer {
+		position: absolute;
+		background-color: var(--main-color);
+		width: 100%;
+		bottom: 0;
+		height: 60px;
+		padding: 20px;
+		color: aliceblue;
+	}
+	form {
+		width: 85%;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+	}
+	form div {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+		align-items: center;
+		justify-content: center;
+	}
+	form label {
+		font-size: 20px;
+		margin-right: 15px;
+		min-width: fit-content;
+	}
+	form input {
+		margin-right: 15px;
+	}
+
+	form button {
+		width: 80px;
+		text-align: center;
+		margin: auto;
+		height: 35px;
+		outline: none;
+		background-color: var(--main-color);
+		color: aliceblue;
+		border-radius: 30px;
+		border: none;
+	}
+	form button:hover {
+		cursor: pointer;
+	}
+	.container {
+		/* display: flex; */
+		padding: 20px;
+		width: 100%;
+	}
+</style>
